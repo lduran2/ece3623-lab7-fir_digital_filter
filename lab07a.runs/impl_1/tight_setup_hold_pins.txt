@@ -1,0 +1,49 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                     design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/adcstate_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                          design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1sck_reg/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[0]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[6]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[1]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[7]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[9]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[3]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[8]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[6]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[6]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                          design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1syn_reg/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[9]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[7]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[8]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                  design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                  design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[10]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                  design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[9]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[8]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[10]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                  design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[10]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[7]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[4]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[2]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[4]/D|
+|               clk_fpga_1 |               clk_fpga_0 |                                    design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/axi_rdata_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat2reg_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                   design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dat1reg_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_1 |                                          design_1_i/AD1Pmod_0/inst/AD1Pmod_v1_0_S00_AXI_inst/AD1dav_reg/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

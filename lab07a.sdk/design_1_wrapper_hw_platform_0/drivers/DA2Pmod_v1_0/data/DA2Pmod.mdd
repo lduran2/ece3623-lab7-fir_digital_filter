@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER DA2Pmod
+	OPTION supported_peripherals = (DA2Pmod);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = DA2Pmod;
+END DRIVER
