@@ -21,6 +21,8 @@
 #define DA2dat1	0x43C10008	 //DA2 channel 1 data - output
 #define DA2dat2 0x43C1000C	 //DA2 channel 2 data - output
 
+#define	WORST_CASE	18432	// worst case output if input is 2048
+
 int main(void)
 {
 	int adcdav;		//ADC data available
@@ -36,6 +38,8 @@ int main(void)
 	int x1c;		//	  x(m-2)
 	int x1d;		//	  x(m-3)
 	int y1a;		//	  y(m)
+
+	double att_den = (double)WORST_CASE;	// attenuation denominator
 
 	xil_printf("\n\rStarting AD1-DA2 Pmod FIR example...\n");
 	Xil_Out32(AD1acq,0);		//ADC stop acquire
@@ -59,14 +63,14 @@ int main(void)
 		while (adcdav==1)				//wait for reset
 			adcdav=Xil_In32(AD1dav);
 
-		x1d=x1c;						//ADC ch1 -> DAC ch1 FIR
-		x1c=x1b;
-		x1b=x1a;
+		x1d=x1c;						//	  x(m-3)	//ADC ch1 -> DAC ch1 FIR
+		x1c=x1b;						//	  x(m-2)
+		x1b=x1a;						//    x(m-1)
 		adcdata1=adcdata1-2048;			//offset for ADC
 		x1a=adcdata1/8;					//efficient shift right scaling
-		y1a=5*x1a+4*x1b+2*x1c+2*x1d;	//example FIR
-		dacdata1=y1a+2048;				//offset to restore DAC
-
+		// y(m) = 3x(m) + x(m-1) + 4x(m-2) + x(m-3)
+		y1a=((3*x1a) + (x1b) + (4*x1c) + (x1d));	//Happy Birthday FIR
+		dacdata1=(y1a + 2048);		//12-bits and offset to restore DAC
 		dacdata2=adcdata2;              //ADC ch2 -> DAC ch2 straight through
 
 		//DAC
