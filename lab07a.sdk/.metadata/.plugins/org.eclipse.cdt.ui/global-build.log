@@ -1,74 +1,4 @@
-10:19:03 **** Incremental Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/AD1DA2Pmod.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
-../src/AD1DA2Pmod.c:7:10: fatal error: platform.h: No such file or directory
- #include "platform.h"
-          ^~~~~~~~~~~~
-compilation terminated.
-make: *** [src/subdir.mk:23: src/AD1DA2Pmod.o] Error 1
-10:19:18 **** Auto Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/AD1DA2Pmod.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
-'Finished building: ../src/AD1DA2Pmod.c'
-' '
-'Building target: fir_digital_filter.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: fir_digital_filter.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
-'Finished building: fir_digital_filter.elf.size'
-' '
-10:19:55 **** Incremental Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-15:17:27 **** Clean-only build of project fir_digital_filter_bsp ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [Makefile:26: clean] Error 1
-make: *** [Makefile:33: ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [Makefile:26: clean] Error 1
-make: *** [Makefile:33: ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
-make: Target 'clean' not remade because of errors.
-15:17:31 **** Clean-only build of configuration Debug for project fir_digital_filter ****
-make clean 
-rm -rf  ./src/AD1DA2Pmod.o  ./src/AD1DA2Pmod.d  fir_digital_filter.elf.size  fir_digital_filter.elf
-' '
-15:17:32 **** Build of project fir_digital_filter_bsp ****
+19:52:53 **** Build of project fir_digital_filter_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src"
 make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -202,7 +132,11 @@ make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-
 make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xadcps"
 'Finished building libraries'
-15:18:19 **** Build of configuration Debug for project fir_digital_filter ****
+
+**** Build of configuration Debug for project fir_digital_filter ****
+
+Nothing to build for project fir_digital_filter
+19:55:50 **** Auto Build of configuration Debug for project fir_digital_filter ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -219,252 +153,15 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
 'Finished building: fir_digital_filter.elf.size'
 ' '
-17:24:57 **** Clean-only build of project fir_digital_filter_bsp ****
-make -k clean 
-make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [Makefile:26: clean] Error 1
-make: *** [Makefile:33: ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s clean 
-rm: cannot lstat `*.o': Invalid argument
-make[1]: *** [Makefile:26: clean] Error 1
-make: *** [Makefile:33: ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src/make.clean] Error 2
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s clean 
-make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
-make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s clean 
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s clean 
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s clean 
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s clean 
-make: Target 'clean' not remade because of errors.
-17:25:00 **** Clean-only build of configuration Debug for project fir_digital_filter ****
-make clean 
-rm -rf  ./src/AD1DA2Pmod.o  ./src/AD1DA2Pmod.d  fir_digital_filter.elf.size  fir_digital_filter.elf
-' '
-17:25:01 **** Build of project fir_digital_filter_bsp ****
-make -k all 
-"Running Make include in ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Running Make libs in ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling AD1Pmod..."
-AD1Pmod_selftest.c: In function 'AD1PMOD_Reg_SelfTest':
-AD1Pmod_selftest.c:52:56: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
-    if ( AD1PMOD_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                        ^~
-AD1Pmod_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-arm-none-eabi-ar: creating ../../../lib/libxil.a
-"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
-make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling coresightps_dcc"
-"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
-make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling cpu_cortexa9"
-"Running Make libs in ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling DA2Pmod..."
-DA2Pmod_selftest.c: In function 'DA2PMOD_Reg_SelfTest':
-DA2Pmod_selftest.c:52:56: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
-    if ( DA2PMOD_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                        ^~
-DA2Pmod_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
-make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling ddrps"
-"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling devcfg"
-"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling dmaps"
-"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling emacps"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
-make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling gpiops"
-"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
-make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
-make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling qspips"
-"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
-make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scugic"
-"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scutimer"
-"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
-make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling scuwdt"
-"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling sdps"
-"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
-make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling standalone"
-In file included from usleep.c:56:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xil_sleeptimer.c:51:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from xtime_l.c:49:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-In file included from sleep.c:53:
-xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_9/src"
-make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling ttcps"
-"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
-make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling uartps"
-"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
-make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling usbps"
-"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
-make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
-"Compiling xadcps"
-'Finished building libraries'
-17:25:47 **** Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/AD1DA2Pmod.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
-'Finished building: ../src/AD1DA2Pmod.c'
-' '
-'Building target: fir_digital_filter.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: fir_digital_filter.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
-'Finished building: fir_digital_filter.elf.size'
-' '
-17:27:00 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+19:55:53 **** Auto Build of configuration Debug for project fir_digital_filter ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
-17:30:02 **** Incremental Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-17:47:47 **** Incremental Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-20:23:30 **** Auto Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/AD1DA2Pmod.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
-'Finished building: ../src/AD1DA2Pmod.c'
-' '
-'Building target: fir_digital_filter.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: fir_digital_filter.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
-'Finished building: fir_digital_filter.elf.size'
-' '
-20:36:08 **** Auto Build of configuration Debug for project fir_digital_filter ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/AD1DA2Pmod.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
-'Finished building: ../src/AD1DA2Pmod.c'
-' '
-'Building target: fir_digital_filter.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: fir_digital_filter.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
-'Finished building: fir_digital_filter.elf.size'
-' '
-22:14:44 **** Auto Build of configuration Debug for project fir_digital_filter ****
+19:57:40 **** Auto Build of configuration Debug for project fir_digital_filter ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -472,9 +169,9 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
 ../src/AD1DA2Pmod.c: In function 'main':
-../src/AD1DA2Pmod.c:42:9: warning: unused variable 'att_den' [-Wunused-variable]
-  double att_den = (double)WORST_CASE; // attenuation denominator
-         ^~~~~~~
+../src/AD1DA2Pmod.c:115:15: warning: unused variable 'delay' [-Wunused-variable]
+  volatile int delay;
+               ^~~~~
 'Finished building: ../src/AD1DA2Pmod.c'
 ' '
 'Building target: fir_digital_filter.elf'
@@ -485,10 +182,690 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  29972	   1544	  23256	  54772	   d5f4	fir_digital_filter.elf
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
 'Finished building: fir_digital_filter.elf.size'
 ' '
-22:14:57 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+19:57:45 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:115:6: warning: unused variable 'delay' [-Wunused-variable]
+  int delay;
+      ^~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+19:58:09 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:173:7: error: expected expression before ')' token
+   if ()
+       ^
+../src/AD1DA2Pmod.c:115:6: warning: unused variable 'delay' [-Wunused-variable]
+  int delay = LOG_DELAY;
+      ^~~~~
+make: *** [src/subdir.mk:23: src/AD1DA2Pmod.o] Error 1
+19:58:33 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+19:58:57 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+19:59:27 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:00:57 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:08:32 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:08:48 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:09:48 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36544	   2336	  23320	  62200	   f2f8	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:10:00 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:10:35 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:15:07 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36608	   2336	  23320	  62264	   f338	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:15:20 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36608	   2336	  23320	  62264	   f338	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:15:47 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36604	   2336	  23320	  62260	   f334	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:18:20 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36604	   2336	  23320	  62260	   f334	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:18:31 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:19:43 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:23:33 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36604	   2336	  23320	  62260	   f334	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:23:50 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:26:57 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36596	   2336	  23320	  62252	   f32c	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:27:24 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36620	   2336	  23320	  62276	   f344	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:28:00 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:37:59 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:38:31 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:40:21 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36636	   2336	  23320	  62292	   f354	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:40:30 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36636	   2336	  23320	  62292	   f354	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:40:48 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+20:49:16 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36636	   2336	  23320	  62292	   f354	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:49:25 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36636	   2336	  23320	  62292	   f354	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+20:49:53 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:01:03 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36646	   2336	  23320	  62302	   f35e	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+21:39:17 **** Build of project fir_digital_filter_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/AD1Pmod_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling AD1Pmod..."
+AD1Pmod_selftest.c: In function 'AD1PMOD_Reg_SelfTest':
+AD1Pmod_selftest.c:52:56: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( AD1PMOD_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+AD1Pmod_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/DA2Pmod_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling DA2Pmod..."
+DA2Pmod_selftest.c: In function 'DA2PMOD_Reg_SelfTest':
+DA2Pmod_selftest.c:52:56: warning: comparison of integer expressions of different signedness: 'u32' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+    if ( DA2PMOD_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                        ^~
+DA2Pmod_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_4/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+21:40:06 **** Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36646	   2336	  23320	  62302	   f35e	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+21:42:20 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36636	   2336	  23320	  62292	   f354	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+22:50:09 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36764	   2336	  23320	  62420	   f3d4	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+22:50:12 **** Auto Build of configuration Debug for project fir_digital_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/AD1DA2Pmod.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AD1DA2Pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_digital_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/AD1DA2Pmod.d" -MT"src/AD1DA2Pmod.o" -o "src/AD1DA2Pmod.o" "../src/AD1DA2Pmod.c"
+../src/AD1DA2Pmod.c: In function 'main':
+../src/AD1DA2Pmod.c:109:6: warning: variable 'adcdata2' set but not used [-Wunused-but-set-variable]
+  int adcdata2; //ADC channel 2 data
+      ^~~~~~~~
+'Finished building: ../src/AD1DA2Pmod.c'
+' '
+'Building target: fir_digital_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_digital_filter_bsp/ps7_cortexa9_0/lib -o "fir_digital_filter.elf"  ./src/AD1DA2Pmod.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_digital_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_digital_filter.elf  |tee "fir_digital_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36764	   2336	  23320	  62420	   f3d4	fir_digital_filter.elf
+'Finished building: fir_digital_filter.elf.size'
+' '
+22:50:23 **** Incremental Build of configuration Debug for project fir_digital_filter ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

@@ -1,0 +1,246 @@
+//AD1DA2Pmod.c  PmodAD1 PmodDA2 ADC- FIR Digital Filter Example
+//ECE3622    c2020 Dennis Silage
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xscugic.h"
+#include "xil_io.h"
+
+//#include <stdio.h>
+//#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "math.h"
+
+//AD1Pmod from Address Editor in Vivado, first IP
+#define AD1acq 	0x43C00000	//AD1 acquisition	  - output
+#define AD1dav 	0x43C00004	//AD1 data available  - input
+#define AD1dat1	0x43C00008	//AD1 channel 1 data  - input
+#define AD1dat2	0x43C0000C	//AD1 channel 2 data  - input
+
+//DAC2Pmod from Address Editor in Vivado, second IP
+#define DA2acq  0x43C10000   //DA2 acquisition    - output
+#define DA2dav	0x43C10004	 //DA2 data available - input
+#define DA2dat1	0x43C10008	 //DA2 channel 1 data - output
+#define DA2dat2 0x43C1000C	 //DA2 channel 2 data - output
+
+//GPIOs
+#define	GPIO_DEVICE_ID		XPAR_AXI_GPIO_0_DEVICE_ID
+#define	LED_CH				1
+#define	SWC_CH				2
+#define	SWC_INT				GPIO_INT[SWC_CH]
+#define	INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+#define	INTC_GPIO_INTERRUPT_ID	XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+
+//logging
+#define	LOG_DELAY			20000000	/* software delay length */
+
+//parameters
+#define	WORST_CASE	18432.0	//worst case output if input is 2048
+#define	MASK_12BIT	0xFFF	//12 bit mask
+
+XGpio gpioInst;
+const int GPIO_INT[] = {	//interrupt channel masks, 1-indexed
+		0x0, XGPIO_IR_CH1_MASK, XGPIO_IR_CH2_MASK };
+
+/* interrupt initializing function */
+int IntcInitFunction(u16, XGpio *, int);
+
+//----------------------------------------------------
+// INTERRUPT HANDLER FUNCTION
+// - switch calculates the attenuation numerator
+//----------------------------------------------------
+double attenuate_num = 0.0;	// attenuation numerator
+_Bool lockout = FALSE;
+
+void Swc_Intr_Handler(void *InstancePtr)
+{
+	int swc_value;
+
+	// Disable GPIO interrupts
+	XGpio_InterruptDisable(&gpioInst, SWC_INT);
+
+	swc_value = XGpio_DiscreteRead(&gpioInst, SWC_CH);
+	xil_printf("swc_value = %d\n", (int)swc_value);
+
+	// lockout until swc_value read is 0b0000 again
+	if (lockout) {
+		if (swc_value == 0b0000) {
+			lockout = FALSE;
+			attenuate_num = 0.0;	// 0 numerator for 0 gain
+		}
+	} // end if (lockout)
+	else {
+		lockout = TRUE; // lockout on first switch thrown
+		switch (swc_value) {
+			case 0b0001:
+				attenuate_num = 2047.0;
+			break;
+			case 0b0010:
+				attenuate_num = 1024.0;
+			break;
+			case 0b0100:
+				attenuate_num = 410.0;
+			break;
+			case 0b1000:
+				attenuate_num = 205.0;
+			break;
+			default:	/* it should never reach here */
+				attenuate_num = 100.0;
+			break;
+		}
+	}
+
+	xil_printf("lockout = %d\n", (int)lockout);
+	xil_printf("attenuate_num = %d\n", (int)attenuate_num);
+
+	(void)XGpio_InterruptClear(&gpioInst, SWC_INT);
+	// Always enable back GPIO interrupts
+	XGpio_InterruptEnable(&gpioInst, SWC_INT);
+}
+
+//----------------------------------------------------
+// main function
+//----------------------------------------------------
+int main(void)
+{
+	int adcdav;		//ADC data available
+	int adcdata1;	//ADC channel 1 data
+	int	adcdata2;	//ADC channel 2 data
+
+	int dacdata1;	//DAC channel 1 data
+	int dacdata2;	//DAC channel 2 data
+	int dacdav;		//DAC data available
+
+	int delay = LOG_DELAY;
+
+	int x1a;		//FIR x(m)
+	int x1b;		//    x(m-1)
+	int x1c;		//	  x(m-2)
+	int x1d;		//	  x(m-3)
+	int y1a;		//	  y(m)
+	double dy1a;	//	  ((double)(y(m)))
+	int dacuni1;	//	  dac data unipolar, attenudated y(m)
+
+	int status;
+	// Initialize the GPIO
+	status = XGpio_Initialize(&gpioInst, GPIO_DEVICE_ID);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+	// set data directions
+	XGpio_SetDataDirection(&gpioInst, LED_CH, 0x00);
+	XGpio_SetDataDirection(&gpioInst, SWC_CH, 0xFF);
+
+	// test leds
+	XGpio_DiscreteWrite(&gpioInst, LED_CH, 0xF);
+
+	// Initialize interrupt controller
+	status = IntcInitFunction(INTC_DEVICE_ID, &gpioInst, SWC_INT);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	xil_printf("\n\rStarting AD1-DA2 Pmod FIR example...\n");
+	Xil_Out32(AD1acq,0);		//ADC stop acquire
+	adcdav=Xil_In32(AD1dav);	//ADC available?
+	while(adcdav==1)
+		adcdav=Xil_In32(AD1dav);
+	Xil_Out32(DA2acq,0);		//DAC stop acquire
+	dacdav=Xil_In32(DA2dav);	//DAC available?
+	while(dacdav==1)
+		dacdav=Xil_In32(DA2dav);
+
+	while (1)
+	{
+		//ADC
+		Xil_Out32(AD1acq,1); 			//ADC acquire
+		while (adcdav==0)				//ADC data available?
+			adcdav=Xil_In32(AD1dav);
+		Xil_Out32(AD1acq,0);			//ADC stop acquire
+		adcdata1=Xil_In32(AD1dat1);		//input ADC data
+		adcdata2=Xil_In32(AD1dat2);
+		while (adcdav==1)				//wait for reset
+			adcdav=Xil_In32(AD1dav);
+
+		x1d=x1c;						//	  x(m-3)	//ADC ch1 -> DAC ch1 FIR
+		x1c=x1b;						//	  x(m-2)
+		x1b=x1a;						//    x(m-1)
+		adcdata1=adcdata1-2048;			//offset for ADC
+		x1a=adcdata1/8;					//efficient shift right scaling
+		// y(m) = 3x(m) + x(m-1) + 4x(m-2) + x(m-3)
+		y1a=((3*x1a) + (x1b) + (4*x1c) + (x1d));	//Happy Birthday FIR
+		dy1a = ((double)y1a);
+		dacuni1 = (int)((dy1a * attenuate_num) / WORST_CASE);	//attenuate
+		dacdata1=((dacuni1 & MASK_12BIT)		//12 bits
+				+ 2048);						//offset to restore DAC
+		if (delay == 0) {
+			xil_printf("\n\rattenuate_num = %d\n", attenuate_num);
+			xil_printf("dacdata1 = %d\n", dacdata1);
+			delay = LOG_DELAY;
+		}
+		dacdata2=adcdata2;              //ADC ch2 -> DAC ch2 straight through
+
+		//DAC
+		Xil_Out32(DA2dat1, dacdata1);	//output DAC data
+		Xil_Out32(DA2dat2, dacdata2);
+		Xil_Out32(DA2acq,1);			//DAC acquire
+		while (dacdav==0)				//DAC data output?
+			dacdav=Xil_In32(DA2dav);
+		Xil_Out32(DA2acq,0);			//stop DAC acquire
+		while(dacdav==1)				//wait for reset
+			dacdav=Xil_In32(DA2dav);
+	}
+}
+
+//----------------------------------------------------
+// INITIAL SETUP FUNCTIONS
+//----------------------------------------------------
+
+int InterruptSystemSetup(
+		XScuGic *XScuGicInstancePtr,
+		XGpio *GpioInstancePtr, int ir_mask)
+{
+	// Enable interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, ir_mask);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+
+	return XST_SUCCESS;
+
+}
+
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr, int ir_mask)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+	// The XScuGic driver instance data must be STATIC!
+	static XScuGic INTCInst;
+
+	// Interrupt controller initialization
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&INTCInst, GpioInstancePtr, ir_mask);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect(&INTCInst,
+					  	  	 INTC_GPIO_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)Swc_Intr_Handler,
+					  	  	 (void *)GpioInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, ir_mask);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
+
+	return XST_SUCCESS;
+}
+

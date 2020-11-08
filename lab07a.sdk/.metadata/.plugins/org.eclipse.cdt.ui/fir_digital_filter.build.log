@@ -1,8 +1,8 @@
-22:14:57 **** Incremental Build of configuration Debug for project fir_digital_filter ****
+22:50:23 **** Incremental Build of configuration Debug for project fir_digital_filter ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-22:14:58 Build Finished (took 549ms)
+22:50:23 Build Finished (took 460ms)
 
